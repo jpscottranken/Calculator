@@ -1,0 +1,61 @@
+let number1 = parseFloat(prompt("Enter a number"));
+let number2 = parseFloat(prompt("Enter another number"));
+let answer  = 0;
+
+function main()
+{
+	let operation = selectOperation();
+	
+	if (operation === 1)
+	{
+		answer = add();
+	}
+	else if (operation === 2)
+	{
+		answer = subtract();
+	}
+	else if (operation === 3)
+	{
+		answer = multiply();
+	}
+	else if (operation === 4)
+	{
+		answer = divide();
+	}
+	else
+	{
+		answer = "You entered an invalid operation!";
+	}
+	
+	hello();
+	alert ("The answer is: " + answer);
+}
+
+function selectOperation()
+{
+	let op = prompt("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide");
+	return op;
+}
+
+function add() => number1 + number2;
+
+function subtract() => number1 - number2;
+
+function multiply() => number1 * number2;
+
+function divide() =>
+{
+	if (number2 === 0)
+	{
+		return "Illegal Divide By 0";
+	}
+	
+	return number1 / number2;
+};
+
+function hello()
+{
+	answer = "Jeff Scott";
+}
+
+

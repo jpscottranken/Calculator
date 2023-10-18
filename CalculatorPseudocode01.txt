@@ -1,0 +1,64 @@
+
+function main()
+{
+	let number1 = parseFloat(prompt("Enter a number"));
+	let number2 = parseFloat(prompt("Enter another number"));
+	let answer  = 0;
+	let operation = selectOperation();
+	
+	if (operation === 1)
+	{
+		answer = add(number1, number2);
+	}
+	else if (operation === 2)
+	{
+		answer = subtract(number1, number2);
+	}
+	else if (operation === 3)
+	{
+		answer = multiply(number1, number2);
+	}
+	else if (operation === 4)
+	{
+		answer = divide(number1, number2);
+	}
+	else
+	{
+		answer = "You entered an invalid operation!";
+	}
+	
+	alert ("The answer is: " + answer);
+}
+
+function selectOperation()
+{
+	let op = prompt("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide");
+	return op;
+}
+
+function add(n1, n2)
+{
+	return n1 + n2;
+}
+
+function subtract(n1, n2)
+{
+	return n1 - n2;
+}
+
+function multiply(n1, n2)
+{
+	return n1 * n2;
+}
+
+function divide(n1, n2)
+{
+	if (n2 === 0)
+	{
+		return "Illegal Divide By 0";
+	}
+	
+	return n1 / n2;
+}
+
+
